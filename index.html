@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
+    
     <script src="script.js" defer></script>
 
   </head>
@@ -19,12 +20,12 @@
     <!--hero section-->
     <div class="hero">
       <nav>
-       <img class="logo" src="img/Z.png">
+      <img class="logo" src="img/Z.png">
         <ul>
           <li><a href="#">Контракт СВО</a></li>
-          <li><a href="#"> Точки подбора</a></li>
-          <li><a href="#">Зарплата</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="#Bomba"> Bomba </a></li>
+          <li><a href="#catFacts">Cat Fact</a></li>
+          <li><a href="#FAQ">Контакты и FAQ</a></li>
         </ul>
       </nav>
       <div class="content">
@@ -36,37 +37,55 @@
     </div>
     
     <!--Bomb section-->
-    <div class="bomb">
-        <div class="title">
-            <h2>Atomic Bomb Detonation</h2>
-        </div>
-        <div class="box">
-            <div class="card">
-                <h5>Press the button</h5>
-                <div class="pra">
-                    <p>1 click and the timer will begin <br> P.S Reloading page will not reset the timer so know that</p>
-                    <p style="text-align: center">
-                        <button id="startButton">PRESS IT</button>
-                    </p>
-                    <div id="clock-timer" class="timer"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="bomb" id="Bomba">
+      <div class="carousel carousel-1">
+          <div class="carousel-inner">
+              <img src="img/caut.jpg" alt="Image 1" class="carousel-item active">
+              <img src="img/caut.jpg" alt="Image 2" class="carousel-item">
+              <img src="img/caut.jpg" alt="Image 3" class="carousel-item">
+              <img src="img/caut.jpg" alt="Image 4" class="carousel-item">
+          </div>
+      </div>
   
+      <div class="title">
+          <h2>Atomic Bomb Detonation</h2>
+      </div>
+      <div class="box">
+          <div class="card">
+              <h5>Press the button</h5>
+              <div class="pra">
+                  <p>1 click and the timer will begin <br> P.S Reloading page will not reset the timer so know that</p>
+                  <p style="text-align: center">
+                      <button id="startButton">PRESS IT</button>
+                  </p>
+                  <div id="clock-timer" class="timer"></div>
+              </div>
+          </div>
+      </div>
+      <div class="carousel carousel-2">
+          <div class="carousel-inner">
+              <img src="img/caut.jpg" alt="Image 1" class="carousel-item active">
+              <img src="img/caut.jpg" alt="Image 2" class="carousel-item">
+              <img src="img/caut.jpg" alt="Image 3" class="carousel-item">
+              <img src="img/caut.jpg" alt="Image 4" class="carousel-item">
+          </div>
+      </div>
+  </div>
+
     <!---Cat fact section-->
-    <section class="about">
+    <section class="about" id="catFacts" >
       <div class="main">
         <img src="img/dcat.webp" />
         <div class="about-text">
           <h2>Cat <span>Fact</span></h2>
-          <p>"fact":"Cats' eyes shine in the dark because of the tapetum, a reflective layer in the eye, which acts like a mirror."</p>
+          <p id="catFact">Loading cat fact...</p>
         </div>
       </div>
     </section>
+    
 
     <!--foooter start-->
-    <footer>
+    <footer id="FAQ">
       <p>da</p>
       <div class="social">
         <a href="#"></a>

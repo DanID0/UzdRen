@@ -23,3 +23,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { once: true });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const catFactElement = document.getElementById("catFact");
+    const catUrl = "https://catfact.ninja/fact";
+
+    fetch(catUrl)
+        .then(response => response.json())
+        .then(data => {
+            catFactElement.innerText = data.fact;
+        })
+        .catch(error => {
+            console.error("Error fetching cat fact:", error);
+            catFactElement.innerText = "Failed to load cat fact.";
+        });
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+    function initializeCarousel(carousel) {
+        const carouselInner = carousel.querySelector('.carousel-inner');
+        const carouselItems = carousel.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            carouselItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            carouselItems[currentIndex].classList.add('active');
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+
+        setInterval(showNextImage, 10000);
+    }
+
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(initializeCarousel);
+});
